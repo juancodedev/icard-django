@@ -94,10 +94,21 @@ WSGI_APPLICATION = 'icard.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nombre_de_tu_base_de_datos',  # Reemplaza con el nombre de tu base de datos
+        'USER': 'postgres',
+        'PASSWORD': 'pHZTeb6PcZpAOye',
+        'HOST': 'long-mountain-5929.internal',  # o 'long-mountain-5929.flycast' si prefieres
+        'PORT': '5433',  # Puerto de PostgreSQL
     }
 }
 
