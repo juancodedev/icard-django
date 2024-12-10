@@ -176,3 +176,12 @@ STATICFILES_DIRS = (
 )
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+# STATIC_ROOT = BASE_DIR / 'productionfiles'
+
+# STATIC_URL = 'static/'
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://icard-django-loubvg-ancient-river-7412.fly.dev'
+]
