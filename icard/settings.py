@@ -14,6 +14,12 @@ import os
 import datetime
 from pathlib import Path
 
+import sentry_sdk
+
+sentry_sdk.init(
+    dsn="https://c24357e326402cd8790dff941b3fb278@o4508441625296896.ingest.us.sentry.io/4508441625559040",
+)
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 

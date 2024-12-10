@@ -29,6 +29,10 @@ from products.api.router import router_product
 from tables.api.router import router_table
 from orders.api.router import router_orders
 from payments.api.router import router_payments
+from django.urls import path
+
+def trigger_error(request):
+    division_by_zero = 1 / 0
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -43,6 +47,7 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
+    path('sentry-debug/', trigger_error),
     path('admin/', admin.site.urls),
     path('docs/', schema_view.with_ui('swagger',
          cache_timeout=0), name='schema-swagger-ui'),
