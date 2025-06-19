@@ -27,5 +27,5 @@ ruamel.yaml.clib==0.2.12
 sentry-sdk==2.19.2
 sqlparse==0.5.2
 uritemplate==4.1.1
-urllib3==2.2.3
+urllib3==2.5.0
 whitenoise==6.8.2
